@@ -37,7 +37,7 @@ namespace BookStore
             }
 
 
-
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
