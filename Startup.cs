@@ -16,6 +16,11 @@ namespace BookStore
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddMvc can be used but its somewhat an over kill for mvc
+
+            // services.AddController is used for web API project
+
+            //
             services.AddControllersWithViews();
         }
 
@@ -27,16 +32,18 @@ namespace BookStore
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Use(async (context, next) => {
 
-                await context.Response.WriteAsync("First custom middleware");
-               await next();
-            });
-            
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.Map("/", async (context) =>
+                //{
+
+                //    await context.Response.WriteAsync("hello dear move");
+                //});
+
                 endpoints.MapDefaultControllerRoute();
             });
         }
