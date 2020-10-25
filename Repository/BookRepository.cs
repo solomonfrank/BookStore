@@ -29,8 +29,9 @@ namespace BookStore.Repository
         {
            return new List<BookModel>()
            {
-               new BookModel(){ Id = 1, Author ="William ShakeSpear", Title ="Tempest"},
-               new BookModel(){ Id = 2, Author ="William ShakeSpear", Title ="King Oliver"},
+               new BookModel(){ Id = 1, Author ="William ShakeSpear", Title ="Tempest", Description ="interest book, worth reading"},
+               new BookModel(){ Id = 2, Author ="William ShakeSpear", Title ="King Oliver",  Description ="interest book, worth reading"},
+                new BookModel(){ Id = 2, Author ="Larry Frank", Title ="King Oliver",  Description ="interest book, worth reading by Lary"},
            };
         }
     }

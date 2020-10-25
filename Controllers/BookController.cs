@@ -22,7 +22,7 @@ namespace BookStore.Controllers
         public ViewResult Index()
         {
             var allBooks =  _BookRepository.GetAllBooks();
-            return View();
+            return View(allBooks);
         }
 
         public ViewResult GetBook(int id)
